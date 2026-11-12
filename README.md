@@ -20,6 +20,6 @@ Then visit `http://localhost:8000`. No build step, dependencies, credentials, or
 - [Python client](https://github.com/ManifoldSystems/teapot-py)
 - [Control plane](https://github.com/ManifoldSystems/teapot-control)
 
-The marketing site is live at `https://teapot-iroh.vercel.app/`; it is not an authentication frontend. The agent, control plane, Android app, and Python client repositories are still private while being prepared for open source; those links currently require GitHub org access. The existing control dashboard lives at `https://teapot.example.com` and remains separate. Do not put admin tokens, device keys, or live node identifiers in this site.
+The marketing site is live at `https://teapot-iroh.vercel.app/`; it is not an authentication frontend. The agent, control plane, Android app, and Python client repositories are public. Deploy your own control plane and use its dashboard to approve devices. Do not publish private deployment URLs, admin tokens, device keys, or live node identifiers in this site.
 
 Copy and commands should be checked against the [agent README](https://github.com/ManifoldSystems/teapot) before release. Do not advertise a package manager install or public download until one exists. No license has been chosen for this repository yet; public visibility does not grant reuse rights. See the [publication checklist](https://github.com/ManifoldSystems/teapot-docs/blob/master/PUBLICATION.md) for remaining OSS work.
