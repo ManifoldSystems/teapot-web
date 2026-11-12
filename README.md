@@ -14,7 +14,7 @@ Then visit `http://localhost:8000`. No build step, dependencies, credentials, or
 
 ## Links and scope
 
-- [User guides](https://github.com/ManifoldSystems/teapot-docs) (docs site deployment pending)
+- [User guides](https://teapot-docs.vercel.app/) ([source](https://github.com/ManifoldSystems/teapot-docs))
 - [Agent and CLI](https://github.com/ManifoldSystems/teapot)
 - [Android exit node](https://github.com/ManifoldSystems/teapot-app)
 - [Python client](https://github.com/ManifoldSystems/teapot-py)
