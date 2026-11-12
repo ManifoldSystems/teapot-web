@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f4ee" />
+    <meta name="description" content="Teapot connects your own devices so traffic can leave through the internet connection you choose." />
+    <title>Teapot — Your internet, from somewhere else</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header wrap">
+      <a class="brand" href="#top" aria-label="Teapot home"><span class="brand-mark" aria-hidden="true">t.</span> teapot</a>
+      <nav aria-label="Main navigation">
+        <a href="#how-it-works">How it works</a>
+        <a href="#get-started">Get started</a>
+        <a href="https://github.com/ManifoldSystems/teapot-docs">Docs ↗</a>
+      </nav>
+      <a class="header-link" href="https://teapot.example.com/login">Dashboard <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="main">
+      <section id="top" class="hero wrap" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> A personal mesh for your devices</p>
+          <h1 id="hero-title">Your internet,<br />from <em>somewhere else.</em></h1>
+          <p class="lead">Send a request from your laptop. Let it leave through your phone’s SIM, another computer, or a server you control. Pick the exit that fits the moment.</p>
+          <div class="actions">
+            <a class="button primary" href="#get-started">Get started <span aria-hidden="true">↗</span></a>
+            <a class="button secondary" href="#how-it-works">See how it works <span aria-hidden="true">↓</span></a>
+          </div>
+          <p class="fine-print">Your devices. Your exit. No traffic relayed through the control plane.</p>
+        </div>
+        <div class="diagram" role="img" aria-label="A laptop's local proxy connects through iroh to a phone exit node, which reaches the internet. The control plane handles approval, not proxy traffic.">
+          <div class="diagram-top"><span>THE ROUTE</span><span>01 / 03</span></div>
+          <div class="diagram-node"><span class="node-icon" aria-hidden="true">▣</span><div><small>START HERE</small><strong>Your laptop</strong><span>local proxy · 127.0.0.1:1080</span></div><span class="node-tag">A</span></div>
+          <div class="diagram-line"><span>iroh · direct or relay</span></div>
+          <div class="diagram-node exit"><span class="node-icon" aria-hidden="true">▤</span><div><small>EXIT HERE</small><strong>Your phone</strong><span>mobile data connection</span></div><span class="node-tag">B</span></div>
+          <div class="diagram-line final-line"><span>out to the internet</span></div>
+          <div class="destination"><span class="status-dot" aria-hidden="true"></span> Internet sees B’s IP <span aria-hidden="true">↗</span></div>
+          <div class="diagram-note">Control approves devices. The tunnel runs between them.</div>
+        </div>
+      </section>
+
+      <section id="how-it-works" class="section wrap" aria-labelledby="how-title">
+        <div class="section-intro"><p class="eyebrow">THE IDEA</p><h2 id="how-title">A different way out,<br /><em>without a different machine.</em></h2><p>Teapot makes the connections you already own available as exits. You decide which device a request goes through.</p></div>
+        <div class="feature-grid">
+          <article class="feature"><span class="feature-index">01 / CONNECT</span><h3>Bring your devices</h3><p>Run the agent on your computer, or turn an Android phone into an exit node over its SIM connection.</p></article>
+          <article class="feature"><span class="feature-index">02 / APPROVE</span><h3>Keep your circle small</h3><p>Approve devices in the dashboard and choose which ones may offer an exit. Only approved peers can use it.</p></article>
+          <article class="feature"><span class="feature-index">03 / ROUTE</span><h3>Choose where you leave</h3><p>Use the local HTTP proxy, name an exit per request, or use the Python client to pick and rotate exits.</p></article>
+        </div>
+      </section>
+
+      <section id="get-started" class="start-band" aria-labelledby="start-title"><div class="wrap start-grid">
+        <div><p class="eyebrow">TRY THE ROUTE</p><h2 id="start-title">One proxy.<br /><em>Many ways out.</em></h2><p>Once two devices are approved and an exit is enabled, run the agent and send a request through the local proxy.</p><a class="text-link" href="https://github.com/ManifoldSystems/teapot-docs/blob/main/guides/quickstart.md">Read the setup guide ↗</a></div>
+        <div class="terminal" aria-label="Example terminal commands"><div class="terminal-title"><span class="lights" aria-hidden="true">● ● ●</span> TERMINAL <span>~/teapot</span></div><pre><code><span class="comment"># On each computer: log in, then start the agent</span>
+<span class="prompt">$</span> teapot login
+<span class="prompt">$</span> teapot service install
+
+<span class="comment"># On your laptop: use an approved exit</span>
+<span class="prompt">$</span> curl -x http://127.0.0.1:1080 \
+    https://ifconfig.me</code></pre><div class="terminal-foot">The response is your exit’s public IP.</div></div>
+      </div></section>
+
+      <section class="section wrap more" aria-labelledby="more-title"><div><p class="eyebrow">EXPLORE</p><h2 id="more-title">Build on your mesh.</h2></div><div class="more-links"><a href="https://github.com/ManifoldSystems/teapot"><span>Agent &amp; CLI</span><span>Run your mesh ↗</span></a><a href="https://github.com/ManifoldSystems/teapot-app"><span>Android app</span><span>Use your phone’s SIM ↗</span></a><a href="https://github.com/ManifoldSystems/teapot-py"><span>Python client</span><span>Choose an exit in code ↗</span></a><a href="https://github.com/ManifoldSystems/teapot-docs"><span>Documentation</span><span>Learn the setup ↗</span></a></div></section>
+    </main>
+    <footer class="site-footer wrap"><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">t.</span> teapot</a><p>Make the most of the connections you own.</p><span>Made by Manifold Systems</span></footer>
+  </body>
+</html>
